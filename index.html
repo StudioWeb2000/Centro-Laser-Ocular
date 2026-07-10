@@ -1,0 +1,2036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+      <!-- HEADER -->
+
+ <header class="header">
+
+    <div class="logo">
+        <img src="lo.png" alt="Logo Oculaser">
+
+        <div>
+            <h1>OCULASER</h1>
+            <p>CENTRO OFTALMOLÓGICO</p>
+        </div>
+    </div>
+
+    <!-- Botón hamburguesa -->
+    <div class="menu-toggle" id="menu-toggle">
+    ⋮⋮⋮
+    </div>
+
+    <nav id="menu">
+
+        <!-- Botón cerrar -->
+    
+
+        <ul>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="#">SERVICIOS</a></li>
+            <li><a href="tratmientos.html">TRATAMIENTOS</a></li>
+            <li><a href="especialista.html">ESPECIALISTAS</a></li>
+            <li><a href="#">NOSOTROS</a></li>
+            <li><a href="#">CONTACTO</a></li>
+        </ul>
+
+    </nav>
+
+  <div class="redes-banner">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="https://web.facebook.com/laserocularcentro/?locale=es_LA&_rdc=1&_rdr#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+</header>
+<style>
+
+/* BOTON HAMBURGUESA */
+.menu-toggle{
+    display:none;
+    color:#fff;
+    font-size:32px;
+    cursor:pointer;
+    z-index:10001;
+    user-select:none;
+    transition:.3s;
+}
+
+/* CELULARES */
+@media (max-width:768px){
+
+    .header{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:15px;
+        position:relative;
+    }
+
+    /* Logo */
+    .logo{
+        display:flex;
+        align-items:center;
+        gap:10px;
+    }
+
+    .logo img{
+        width:80px;
+        height:auto;
+    }
+
+    .logo h1{
+        font-size:22px;
+        margin:0;
+    }
+
+    .logo p{
+        font-size:10px;
+        margin:0;
+    }
+
+    /* Ocultar redes */
+    .redes{
+        display:none;
+    }
+
+    /* Mostrar botón hamburguesa */
+    .menu-toggle{
+        display:block;
+        position:relative;
+    }
+
+    /* Menú lateral */
+    nav{
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:250px;
+        height:100vh;
+        background:#234a8d;
+        transition:right .4s ease;
+        z-index:10000;
+        padding-top:70px;
+    }
+
+    /* Mostrar menú */
+    nav.active{
+        right:0;
+    }
+
+    /* Lista */
+    nav ul{
+        margin:0;
+        padding:0;
+        list-style:none;
+        display:flex;
+        flex-direction:column;
+    }
+
+    nav ul li{
+        width:100%;
+    }
+
+    nav ul li a{
+        display:block;
+        padding:18px 25px;
+        color:#fff;
+        text-decoration:none;
+        border-bottom:1px solid rgba(255,255,255,.2);
+        transition:.3s;
+    }
+
+    nav ul li a:hover{
+        background:rgba(255,255,255,.15);
+    }
+
+}
+
+</style>
+<script>
+
+const menu = document.getElementById("menu");
+const menuToggle = document.getElementById("menu-toggle");
+
+menuToggle.addEventListener("click", () => {
+
+    menu.classList.toggle("active");
+
+    // Cambiar el icono
+    if(menu.classList.contains("active")){
+        menuToggle.innerHTML = "✕";
+    }else{
+        menuToggle.innerHTML = "⋮⋮⋮";
+    }
+
+});
+
+</script>
+
+<style>*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.header{
+    height:100px;
+
+   background: linear-gradient(
+    #1e3c72,
+    #2a5298
+);
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 60px;
+}
+
+/* LOGO */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:120px;
+}
+
+.logo h1{
+    color:white;
+    font-size:42px;
+    line-height:1;
+}
+
+.logo p{
+    color:white;
+    font-size:16px;
+    letter-spacing:1px;
+}
+
+/* MENU */
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    font-size:15px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#40b6ff;
+}
+
+/* REDES */
+/* El banner debe tener posición relativa */
+.banner{
+    position: relative;
+}
+
+/* Redes sociales */
+.redes-banner{
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    z-index: 100;
+}
+
+/* Íconos */
+.redes-banner a{
+    width:55px;
+    height:55px;
+    background:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    text-decoration:none;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+/* Colores originales */
+.redes-banner a:nth-child(1){
+    color: #E4405F; /* Instagram */
+}
+
+.redes-banner a:nth-child(2){
+    color: #1877F2; /* Facebook */
+}
+
+.redes-banner a:nth-child(3){
+    color: #25D366; /* WhatsApp */
+}
+
+/* Efecto */
+
+
+.redes-banner a:hover{
+    transform:scale(1.15);
+}
+
+
+/* CELULAR */
+@media (max-width:768px){
+
+    .redes-banner{
+        display: none;
+    }
+
+}
+/* ==========================
+   BANNER
+========================== */
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+
+@media(max-width:768px){
+    /* HEADER MOVIL */
+/* HEADER MOVIL */
+.header{
+    height:80px;
+    padding:0 15px;
+}
+
+/* Logo más pequeño */
+.logo img{
+    width:120px;
+}
+
+.logo h1{
+    font-size:22px;
+}
+
+.logo p{
+    font-size:10px;
+}
+
+/* Ocultar menú normal */
+nav{
+    display:block;
+}
+
+/* Hamburguesa arriba derecha */
+.menu-toggle{
+    display:block;
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:35px;
+    color:white;
+    cursor:pointer;
+    z-index:10001;
+}
+
+/* Ocultar redes */
+.redes{
+    display:none;
+}
+
+/* Menú lateral */
+#menu{
+    position:fixed;
+    top:0;
+    right:-280px;
+    width:280px;
+    height:100vh;
+    background:#1e3c72;
+    transition:0.3s;
+    z-index:10000;
+}
+
+#menu.active{
+    right:0;
+}
+
+#menu ul{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    margin-top:70px;
+    padding:0;
+}
+
+#menu ul li a{
+    display:block;
+    padding:18px 25px;
+    border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+/* Botón cerrar */
+
+
+
+    .texto h2{
+        font-size:40px;
+    }
+
+    .texto p{
+        font-size:18px;
+    }
+
+    .botones{
+        flex-direction:column;
+    }
+
+    .btn1,
+    .btn2{
+        text-align:center;
+    }
+
+    .redes a{
+        width:50px;
+        height:50px;
+        font-size:22px;
+    }
+}
+</style>
+<section class="banner">
+
+    <!-- Slide 1 -->
+    <div class="slide slide1 active">
+        <div class="banner-texto izquierda">
+           <h1>NUESTROS  ESPECIALISTAS</h1>
+        <h2>Cuidamos tu salud visual</h2>
+        <p>
+        Contamos con especialistas altamente calificados, 
+        comprometidos con brindar atención oftalmológica 
+        de calidad .
+        </p>
+
+            <div class="banner-botones">
+                <a href="#contacto" class="btn-principal">Contáctanos</a>
+                <a href="#servicios" class="btn-secundario">Nuestros Servicios</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide slide2">
+        <div class="banner-texto derecha">
+
+    <h1>TRATAMIENTOS OFTALMOLÓGICOS</h1>
+    <h2>Cuidamos tu visión con tecnología avanzada</h2>
+    <p>
+    Ofrecemos tratamientos especializados para 
+    prevenir, diagnosticar y tratar enfermedades oculares 
+    con atención personalizada.
+    </p>
+            
+         
+
+            <div class="banner-botones">
+                <a href="#contacto" class="btn-principal">Contáctanos</a>
+                <a href="#servicios" class="btn-secundario">Nuestros Servicios</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide slide3">
+        <div class="banner-texto izquierda">
+           <h1>TECNOLOGÍA OFTALMOLÓGICA</h1>
+            <h2>Equipos de última generación</h2>
+            <p>
+            Contamos con tecnología moderna
+            para realizar diagnósticos precisos
+            y tratamientos oftalmológicos seguros y efectivos.
+            </p>
+
+            <div class="banner-botones">
+                <a href="#contacto" class="btn-principal">Contáctanos</a>
+                <a href="#servicios" class="btn-secundario">Nuestros Servicios</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<style>/*==============================
+      BANNER CARRUSEL
+===============================*/
+/* BOTONES */
+
+.banner-botones{
+    display:flex;
+    gap:15px;
+    margin-top:35px;
+    flex-wrap:wrap;
+}
+
+.banner-botones a{
+    text-decoration:none;
+    padding:14px 32px;
+    border-radius:40px;
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-principal{
+   background: linear-gradient(135deg, #d8b46a, #b8863b);
+    color:white;
+}
+
+.btn-principal:hover{
+    background:#a67c3d;
+    transform:translateY(-3px);
+}
+
+.btn-secundario{
+   background: linear-gradient(135deg, #1e88e5, #0d47a1);
+    border:2px solid rgb(238, 234, 234);
+    color:rgb(242, 241, 241);
+}
+
+.btn-secundario:hover{
+   background:#a67c3d;
+    transform:translateY(-3px);
+}
+.banner{
+    position: relative;
+    width: 100%;
+    height: 86vh;
+    overflow: hidden;
+}
+
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active{
+    opacity: 1;
+}
+
+/* Oscurece un poco la imagen */
+
+.banner::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+  
+    z-index: 1;
+}
+
+/*==============================
+      TEXTO
+===============================*/
+/*==============================
+      TEXTO PC
+===============================*/
+
+.banner-texto{
+    position: absolute;
+    z-index: 2;
+
+    left: 8%;
+    top: 15%; /* Sube o baja el bloque */
+
+    width: 45%;
+
+    color: rgb(3, 2, 11);
+    text-align: left;
+}
+
+
+.banner-texto h2{
+color: #11b2e3; /* Dorado */
+}
+
+.banner-texto h1{
+
+
+    
+
+    background: linear-gradient(90deg, #0b061f 0%, #0d6efd 50%, #11b2e3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+   
+
+
+   
+    font-size: 65px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    line-height: 1.1;
+}
+
+.banner-texto p{
+
+    width: 80%;
+    font-size: 22px;
+    line-height: 1.6;
+}
+/*==============================
+      IMÁGENES PC
+===============================*/
+
+.slide1{
+    background-image: url("dosc.png");
+}
+
+.slide2{
+    background-image: url("catara.png");
+}
+
+.slide3{
+    background-image: url("equipooo.png");
+}
+
+/*==============================
+      CELULAR
+===============================*/
+
+@media(max-width:768px){
+.banner-botones{
+    margin-top:25px;
+    gap:10px;
+}
+
+.banner-botones a{
+    padding:12px 22px;
+    font-size:15px;
+}
+.banner{
+    height:80vh;
+}
+
+/* Mueve todo el bloque de texto */
+.banner-texto{
+    position:absolute;
+    left:20px;
+    top:15%;   /* Sube el texto */
+    width:60%;
+    margin:0;
+    text-align:left;
+}
+
+/* Título */
+.banner-texto h1{
+    font-size:27px;
+    margin-bottom:15px;
+    line-height:1.1;
+}
+
+.banner-texto h2{
+    font-size:18px;
+    margin-bottom:15px;
+    line-height:1.1;
+}
+
+/* Descripción */
+.banner-texto p{
+    width: 80%;
+    font-size:15px;
+    margin-top:7;
+}
+
+
+
+/* Imágenes para celular */
+
+.slide1{
+
+    background-image: url("sdo.png");
+    background-position: center;
+
+}
+
+.slide2{
+
+    background-image: url("rsd.png");
+    background-position: center;
+
+}
+
+.slide3{
+
+    background-image: url("eq.png");
+    background-position: center;
+
+}
+
+}</style>
+<script>
+
+const slides=document.querySelectorAll(".slide");
+
+let actual=0;
+
+function cambiarBanner(){
+
+    slides[actual].classList.remove("active");
+
+    actual++;
+
+    if(actual>=slides.length){
+        actual=0;
+    }
+
+    slides[actual].classList.add("active");
+
+}
+
+setInterval(cambiarBanner,4000);
+
+</script>
+
+
+ 
+    <!-- SERVICIOS  
+     -->
+<!--    ==========================
+
+
+
+
+
+        SERVICIOS
+===========================-->
+
+
+
+<section class="servicios">
+
+    <div class="servicios-box">
+
+        <div class="servicios-principal">
+
+            <h2>Nuestros Servicios</h2>
+
+            <div class="servicios-grid">
+
+                <div class="servicio">
+                    <i class="fas fa-eye"></i>
+                    <h4>Examen Visual</h4>
+                    <p>Evaluación integral de la salud visual.</p>
+                </div>
+
+                <div class="servicio">
+                    <i class="fas fa-glasses"></i>
+                    <h4>Adaptación de Lentes</h4>
+                    <p>Lentes oftálmicos y de contacto.</p>
+                </div>
+
+                <div class="servicio">
+                    <i class="fas fa-search"></i>
+                    <h4>Cataratas</h4>
+                    <p>Diagnóstico y tratamiento oportuno.</p>
+                </div>
+
+                <div class="servicio">
+                    <i class="fas fa-eye-dropper"></i>
+                    <h4>Cirugía LASIK</h4>
+                    <p>Corrección visual moderna.</p>
+                </div>
+
+                <div class="servicio">
+                    <i class="fas fa-child"></i>
+                    <h4>Pediatría</h4>
+                    <p>Atención visual infantil.</p>
+                </div>
+
+                <div class="servicio">
+                    <i class="fas fa-eye"></i>
+                    <h4>Glaucoma</h4>
+                    <p>Control y seguimiento especializado.</p>
+                </div>
+
+            </div>
+
+            <a href="#" class="btn-servicios">
+                VER TODOS LOS SERVICIOS
+            </a>
+
+        </div>
+
+        <div class="agenda-box">
+
+            <div class="agenda-card">
+                <h3>Agenda tu cita</h3>
+
+                <p>
+                    Reserva fácilmente tu consulta
+                    oftalmológica en línea.
+                </p>
+
+                <img src="celulargh.png" alt="Agenda">
+            </div>
+
+            <div class="doctor-card">
+
+                <div class="doctor-info">
+                    <h3>Nuestros Especialistas</h3>
+
+                    <p>
+                        Profesionales altamente
+                        capacitados para cuidar
+                        tu salud visual.
+                    </p>
+
+                    <a href="#">VER MÉDICOS</a>
+                </div>
+
+                <img src="doctorrr.png" alt="Especialista">
+
+            </div>
+
+            <div class="equipo-card">
+
+                <div>
+                    <h3>Tecnología Avanzada</h3>
+
+                    <p>
+                        Equipos modernos para
+                        diagnósticos precisos.
+                    </p>
+
+                    <a href="#">CONOCE MÁS</a>
+                </div>
+
+                <img src="equipodr.png" alt="Equipo">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<style>
+.servicios{
+    background-image: url("bannerr.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding:60px 8%;
+}
+
+.servicios-box{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    gap:25px;
+}
+
+.servicios-principal{
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.servicios-principal h2{
+    text-align:center;
+    color:#003a8c;
+    margin-bottom:35px;
+    font-size:32px;
+}
+
+.servicios-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.servicio{
+    text-align:center;
+}
+
+.servicio i{
+    font-size:45px;
+    color:#0066ff;
+    margin-bottom:15px;
+}
+
+.servicio h4{
+    color:#003a8c;
+    margin-bottom:10px;
+}
+
+.servicio p{
+    color:#666;
+    font-size:14px;
+}
+
+.btn-servicios{
+    display:block;
+    width:280px;
+    margin:35px auto 0;
+    text-align:center;
+    background:#005dff;
+    color:white;
+    text-decoration:none;
+    padding:14px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.agenda-box{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.agenda-card{
+    background:linear-gradient(135deg,#0e1e34,#005eff);
+    color:white;
+    padding:20px;
+    border-radius:15px;
+}
+
+.agenda-card img{
+    width:100%;
+    margin-top:15px;
+}
+
+.doctor-card,
+.equipo-card{
+    background:white;
+    border-radius:15px;
+    padding:15px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.doctor-card img,
+.equipo-card img{
+    width:120px;
+}
+
+.doctor-card h3,
+.equipo-card h3{
+    color:#000c8c;
+    margin-bottom:10px;
+}
+
+.doctor-card p,
+.equipo-card p{
+    font-size:14px;
+    color:#555;
+}
+
+.doctor-card a,
+.equipo-card a{
+    display:inline-block;
+    margin-top:10px;
+    background:#2a374e;
+    color:white;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:6px;
+    font-size:14px;
+}
+
+
+
+
+@media (max-width:768px){
+
+    .servicios-box{
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .servicios-principal,
+    .agenda-box{
+        width:100%;
+    }
+
+    .servicios-grid{
+        grid-template-columns:1fr;
+    }
+
+    /* Tarjetas */
+    .agenda-card,
+    .doctor-card,
+    .equipo-card{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        gap:15px;
+    }
+
+    /* Contenido */
+    .agenda-texto{
+        width:100%;
+        text-align:center;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .doctor-card div,
+    .equipo-card div{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    /* Botones */
+    .agenda-card a,
+    .doctor-card a,
+    .equipo-card a{
+        margin:15px 0 20px;
+    }
+
+    /* Imágenes abajo */
+    .agenda-img,
+    .doctor-card img,
+    .equipo-card img{
+        width:160px;
+        margin:0 auto;
+        order:2;
+    }
+
+}
+
+
+
+
+
+
+/* ==========================
+   BANNER RESPONSIVE SOLO
+========================== */
+
+/* =====================================
+   ESPECIALISTAS SLIDER
+===================================== */
+/* ==========================
+   RESET
+========================== */
+
+
+.agenda-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.agenda-texto{
+    flex: 1;
+}
+
+.agenda-img{
+    width: 240px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    background: transparent;
+}/* =====================================
+   ESPECIALISTAS SLIDER
+===================================== */
+/* ==========================
+   RESET
+========================== */</style>
+
+<style>.agenda-card img {
+    width: 150px; /* tamaño deseado */
+    height: auto;
+}</style>
+
+    <!-- ESPECIALISTAS -->
+<!--=========================
+        ESPECIALISTAS
+==========================-->
+<!--=========================================
+            ESPECIALISTAS
+==========================================-->
+
+<section class="especialistas">
+
+    <div class="contenido-especialistas">
+
+        <!-- INFORMACIÓN SUPERIOR -->
+        <div class="info-superior">
+
+            <span class="etiqueta">
+                EXPERIENCIA Y PROFESIONALISMO
+            </span>
+
+            <h1>
+                Nuestros <br>
+                <span>Especialistas</span>
+            </h1>
+
+            <div class="linea"></div>
+
+            <p class="descripcion">
+                Contamos con un equipo de oftalmólogos altamente capacitados para cuidar tu salud visual.
+            </p>
+
+        </div>
+
+        <!-- IMAGEN -->
+        <div class="area-imagen">
+
+            <div class="contenedor-foto">
+
+                <img
+                    id="foto"
+                    class="foto-especialista"
+                    src=""
+                    alt="Especialista">
+
+            </div>
+
+        </div>
+
+        <!-- INFORMACIÓN INFERIOR -->
+        <div class="info-inferior">
+
+            <h2 id="nombre">
+                Cargando...
+            </h2>
+
+            <h3 id="especialidad"></h3>
+
+            <p class="detalle" id="detalle"></p>
+
+            <a href="#" class="btn-especialistas">
+                VER ESPECIALISTAS
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Indicadores -->
+    <div class="especialistas-indicadores" id="especialistas-indicadores"></div>
+
+</section>
+
+<style>/*=====================================
+            ESPECIALISTAS
+======================================*/
+
+.especialistas{
+    width:100%;
+    background:#eef3fa;
+    padding:80px 8%;
+}
+
+.contenido-especialistas{
+    display:grid;
+    grid-template-columns:45% 55%;
+    grid-template-areas:
+        "superior imagen"
+        "inferior imagen";
+    align-items:center;
+    gap:30px;
+}
+
+/*=============================
+      BLOQUES
+=============================*/
+
+.info-superior{
+    grid-area:superior;
+}
+
+.info-inferior{
+    grid-area:inferior;
+}
+
+.area-imagen{
+    grid-area:imagen;
+    width:100%;
+    height:550px;
+}
+
+/*=============================
+      TEXTOS
+=============================*/
+
+.etiqueta{
+    color:#2563eb;
+    font-size:15px;
+    font-weight:bold;
+}
+
+.info-superior h1{
+    margin-top:15px;
+    font-size:70px;
+    line-height:1;
+    color:#0f2d89;
+}
+
+.info-superior h1 span{
+    color:#2563eb;
+}
+
+.linea{
+    width:80px;
+    height:5px;
+    background:#2563eb;
+    margin:20px 0;
+}
+
+.descripcion{
+    font-size:18px;
+    color:#555;
+    line-height:1.7;
+}
+
+.info-inferior h2{
+    margin-top:30px;
+    color:#0f2d89;
+    font-size:45px;
+}
+
+.info-inferior h3{
+    margin-top:10px;
+    color:#2563eb;
+    font-size:26px;
+}
+
+.detalle{
+    margin-top:15px;
+    color:#666;
+    line-height:1.8;
+}
+
+/*=============================
+      BOTÓN
+=============================*/
+
+.btn-especialistas{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+    background:#2563eb;
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.btn-especialistas:hover{
+    background:#0f2d89;
+}
+
+/*=============================
+      IMAGEN
+=============================*/
+
+.contenedor-foto{
+
+    width:100%;
+    height:100%;
+    overflow:hidden;
+
+    border-top-left-radius:300px;
+    border-bottom-left-radius:300px;
+
+    background:#d9d9d9;
+
+}
+
+.foto-especialista{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+/*=============================
+      INDICADORES
+=============================*/
+
+.especialistas-indicadores{
+
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:35px;
+
+}
+
+.indicador{
+
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:#c8d5f2;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.indicador.activo{
+
+    background:#2563eb;
+    transform:scale(1.3);
+
+}
+
+/*=====================================
+        TABLET
+======================================*/
+
+@media(max-width:992px){
+
+    .contenido-especialistas{
+
+        display:flex;
+        flex-direction:column;
+
+    }
+
+    .info-superior,
+    .info-inferior{
+
+        width:100%;
+        text-align:center;
+
+    }
+
+    .linea{
+
+        margin:20px auto;
+
+    }
+
+    .area-imagen{
+
+        width:100%;
+        height:450px;
+
+    }
+
+    .contenedor-foto{
+
+        border-radius:30px;
+
+    }
+
+    .info-superior h1{
+
+        font-size:52px;
+
+    }
+
+}
+
+/*=====================================
+          CELULAR
+======================================*/
+
+@media(max-width:768px){
+
+    .especialistas{
+
+        padding:60px 20px;
+
+    }
+
+    .contenido-especialistas{
+
+        display:flex;
+        flex-direction:column;
+
+    }
+
+    .info-superior{
+
+        order:1;
+        text-align:center;
+
+    }
+
+    .area-imagen{
+
+        order:2;
+
+        width:100%;
+        height:330px;
+
+    }
+
+    .contenedor-foto{
+
+        border-radius:25px;
+
+    }
+
+    .info-inferior{
+
+        order:3;
+        text-align:center;
+
+    }
+
+    .info-superior h1{
+
+        font-size:40px;
+
+    }
+
+    .info-inferior h2{
+
+        font-size:30px;
+
+    }
+
+    .info-inferior h3{
+
+        font-size:22px;
+
+    }
+
+    .descripcion,
+    .detalle{
+
+        font-size:16px;
+
+    }
+
+    .btn-especialistas{
+
+        display:inline-block;
+        margin-top:25px;
+
+    }
+
+}</style>
+<script>
+
+(() => {
+
+    const especialistas = [
+
+        {
+            nombre: "Dra. Ana López",
+            especialidad: "Cirugía de Cataratas",
+            detalle: "Especialista con más de 15 años de experiencia en cirugía oftalmológica avanzada.",
+            foto: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=1200"
+        },
+
+        {
+            nombre: "Dr. Carlos Rospligliosi",
+            especialidad: "Retina",
+            detalle: "Especialista en enfermedades de la retina, vítreo y tratamientos con láser.",
+            foto: "carlos_ropligliosi.jpg"
+        },
+
+        {
+            nombre: "Dra. María Torres",
+            especialidad: "Oftalmología Pediátrica",
+            detalle: "Especialista en salud visual infantil y control del desarrollo visual.",
+            foto: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=1200"
+        }
+
+    ];
+
+    let indice = 0;
+
+    const foto = document.getElementById("foto");
+    const nombre = document.getElementById("nombre");
+    const especialidad = document.getElementById("especialidad");
+    const detalle = document.getElementById("detalle");
+    const indicadores = document.getElementById("especialistas-indicadores");
+
+    // Verifica que exista la sección
+    if (!foto || !nombre || !especialidad || !detalle || !indicadores) {
+        return;
+    }
+
+    // Crear indicadores
+    especialistas.forEach((item, i) => {
+
+        const punto = document.createElement("span");
+        punto.className = "indicador";
+
+        if (i === 0) {
+            punto.classList.add("activo");
+        }
+
+        punto.addEventListener("click", () => {
+
+            indice = i;
+            mostrar();
+            reiniciar();
+
+        });
+
+        indicadores.appendChild(punto);
+
+    });
+
+    function mostrar(){
+
+        const doctor = especialistas[indice];
+
+        foto.style.opacity = 0;
+
+        setTimeout(() => {
+
+            foto.src = doctor.foto;
+            nombre.textContent = doctor.nombre;
+            especialidad.textContent = doctor.especialidad;
+            detalle.textContent = doctor.detalle;
+
+            foto.style.opacity = 1;
+
+        },200);
+
+        document
+            .querySelectorAll(".especialistas-indicadores .indicador")
+            .forEach(p => p.classList.remove("activo"));
+
+        document
+            .querySelectorAll(".especialistas-indicadores .indicador")[indice]
+            .classList.add("activo");
+
+    }
+
+    let autoplay = setInterval(siguiente, 4000);
+
+    function siguiente(){
+
+        indice++;
+
+        if(indice >= especialistas.length){
+            indice = 0;
+        }
+
+        mostrar();
+
+    }
+
+    function reiniciar(){
+
+        clearInterval(autoplay);
+        autoplay = setInterval(siguiente,4000);
+
+    }
+
+    mostrar();
+
+})();
+
+</script>
+
+<!-- CONTACTO -->
+
+    <!-- FOOTER    -->
+
+
+<!-- BLOG / CONSEJOS VISUALES -->
+<section class="blog" id="blog">
+
+    <div class="titulo-blog">
+        <span>CONSEJOS DE SALUD VISUAL</span>
+        <h2>Cuida la Salud de tus Ojos</h2>
+    </div>
+
+    <div class="contenedor-blog">
+
+        <!-- TARJETA 1 -->
+        <div class="card-blog">
+
+            <img src="img/catarata.jpg" alt="Catarata">
+
+            <div class="contenido-blog">
+
+                <h3>¿Qué es la Catarata?</h3>
+
+                <p>
+                    Conoce los síntomas más frecuentes y cuándo acudir al especialista.
+                </p>
+
+                <div class="texto-completo">
+                    <p>
+                        La catarata es una opacidad del cristalino del ojo que provoca
+                        visión borrosa, sensibilidad a la luz y dificultad para realizar
+                        actividades diarias. El tratamiento más efectivo es la cirugía,
+                        que permite recuperar una visión más clara y mejorar la calidad
+                        de vida del paciente.
+                    </p>
+                </div>
+
+                <button class="btn-leer" onclick="mostrarTexto(this)">
+                    Leer más
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- TARJETA 2 -->
+        <div class="card-blog">
+
+            <img src="img/glaucoma.jpg" alt="Glaucoma">
+
+            <div class="contenido-blog">
+
+                <h3>Glaucoma</h3>
+
+                <p>
+                    Detectar esta enfermedad a tiempo puede evitar daños permanentes.
+                </p>
+
+                <div class="texto-completo">
+                    <p>
+                        El glaucoma es una enfermedad ocular que puede dañar el nervio
+                        óptico. En muchas ocasiones no presenta síntomas en sus etapas
+                        iniciales, por lo que las revisiones oftalmológicas periódicas
+                        son fundamentales para su detección temprana.
+                    </p>
+                </div>
+
+                <button class="btn-leer" onclick="mostrarTexto(this)">
+                    Leer más
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- TARJETA 3 -->
+        <div class="card-blog">
+
+            <img src="img/ojo-seco.jpg" alt="Ojo seco">
+
+            <div class="contenido-blog">
+
+                <h3>Síndrome de Ojo Seco</h3>
+
+                <p>
+                    Aprende cómo prevenir la irritación y mantener tus ojos hidratados.
+                </p>
+
+                <div class="texto-completo">
+                    <p>
+                        El síndrome de ojo seco ocurre cuando los ojos no producen
+                        suficientes lágrimas o cuando estas se evaporan demasiado rápido.
+                        Puede causar ardor, enrojecimiento y sensación de cuerpo extraño.
+                        Un diagnóstico oportuno ayuda a controlar los síntomas.
+                    </p>
+                </div>
+
+                <button class="btn-leer" onclick="mostrarTexto(this)">
+                    Leer más
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<style>/* ==========================
+   BLOG / CONSEJOS VISUALES
+========================== */
+
+.blog{
+    padding:80px 8%;
+    background:#f7fbff;
+}
+
+.titulo-blog{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.titulo-blog span{
+    color:#00a6ff;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+.titulo-blog h2{
+    font-size:42px;
+    color:#0b2341;
+    margin-top:10px;
+}
+
+/* CONTENEDOR */
+
+.contenedor-blog{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:30px;
+    flex-wrap:wrap;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+/* TARJETAS */
+
+.card-blog{
+    width:350px;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.card-blog:hover{
+    transform:translateY(-8px);
+}
+
+.card-blog img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+/* CONTENIDO */
+
+.contenido-blog{
+    padding:25px;
+}
+
+.contenido-blog h3{
+    color:#0b2341;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.contenido-blog p{
+    color:#666;
+    line-height:1.8;
+    font-size:15px;
+    text-align:justify;
+}
+
+/* TEXTO OCULTO */
+
+.texto-completo{
+    display:none;
+    margin-top:15px;
+    animation:mostrar .4s ease;
+}
+
+.texto-completo p{
+    color:#555;
+    line-height:1.9;
+    text-align:justify;
+}
+
+/* BOTÓN */
+
+.btn-leer{
+    display:block;
+    margin:20px auto 0;
+    background:#00a6ff;
+    color:#fff;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:14px;
+    transition:.3s;
+}
+
+.btn-leer:hover{
+    background:#0088d4;
+    transform:scale(1.05);
+}
+
+/* ANIMACIÓN */
+
+@keyframes mostrar{
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .blog{
+        padding:60px 20px;
+    }
+
+    .titulo-blog h2{
+        font-size:30px;
+    }
+
+    .card-blog{
+        width:100%;
+        max-width:400px;
+    }
+
+    .card-blog img{
+        height:200px;
+    }
+
+}</style>
+
+
+<script>
+function mostrarTexto(boton){
+
+    const texto = boton.parentElement.querySelector('.texto-completo');
+
+    if(texto.style.display === "block"){
+        texto.style.display = "none";
+        boton.textContent = "Leer más";
+    }else{
+        texto.style.display = "block";
+        boton.textContent = "Leer menos";
+    }
+
+}
+</script>
+   <footer class="footer">
+
+    <div class="footer-contenedor">
+
+        <!-- Empresa -->
+        <div class="footer-col">
+            <h3>OCULASER</h3>
+
+            <p>
+                Centro Oftalmológico comprometido con el cuidado de tu salud visual,
+                ofreciendo atención especializada con tecnología de última generación.
+            </p>
+        </div>
+
+        <!-- Enlaces -->
+        <div class="footer-col">
+            <h3>Enlaces</h3>
+
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#especialistas">Especialistas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div class="footer-col">
+            <h3>Contacto</h3>
+
+            <p><i class="fas fa-map-marker-alt"></i> Lima, Perú</p>
+
+            <p><i class="fas fa-phone"></i> +51 999 999 999</p>
+
+            <p><i class="fas fa-envelope"></i> info@oculaser.pe</p>
+        </div>
+
+        <!-- Redes -->
+        <div class="footer-col">
+            <h3>Síguenos</h3>
+
+            <div class="redes-footer">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+                <a href="#"><i class="fab fa-youtube"></i></a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 <strong>OCULASER Centro Oftalmológico</strong> | Todos los derechos reservados.
+        </p>
+
+    </div>
+
+</footer>
+<style>/*=========================
+        FOOTER
+=========================*/
+
+.footer{
+    background:#0b1f3a;
+    color:#fff;
+    margin-top:80px;
+}
+
+.footer-contenedor{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:50px;
+    padding:60px 0;
+}
+
+.footer-col h3{
+    font-size:22px;
+    margin-bottom:20px;
+    color:#35b6ff;
+}
+
+.footer-col p{
+    line-height:1.8;
+    color:#d7d7d7;
+    margin-bottom:10px;
+}
+
+.footer-col ul{
+    list-style:none;
+}
+
+.footer-col ul li{
+    margin-bottom:12px;
+}
+
+.footer-col ul li a{
+    color:#d7d7d7;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-col ul li a:hover{
+    color:#35b6ff;
+    padding-left:6px;
+}
+
+.redes-footer{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.redes-footer a{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#17345d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:20px;
+    transition:.3s;
+}
+
+.redes-footer a:hover{
+    background:#35b6ff;
+    transform:translateY(-5px);
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.15);
+    text-align:center;
+    padding:20px;
+    color:#cfcfcf;
+    font-size:15px;
+}
+
+/*=========================
+      RESPONSIVE
+=========================*/
+
+@media(max-width:900px){
+
+    .footer-contenedor{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .footer-contenedor{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .redes-footer{
+        justify-content:center;
+    }
+
+}</style>
+
+
+
+
+    
+</body>
+</html>
