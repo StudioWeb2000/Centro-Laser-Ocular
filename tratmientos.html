@@ -14,14 +14,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
  <header class="header">
 
-    <div class="logo">
-        <img src="lo.png" alt="Logo Oculaser">
+   <div class="logo">
 
-        <div>
-            <h1>OCULASER</h1>
-            <p>CENTRO OFTALMOLÓGICO</p>
-        </div>
+    <a href="index.html">
+        <img src="lo.png" alt="Logo Oculaser">
+    </a>
+
+    <div>
+        <h1>OCULASER</h1>
+        <p>CENTRO OFTALMOLÓGICO</p>
     </div>
+
+</div>
 
     <!-- Botón hamburguesa -->
     <div class="menu-toggle" id="menu-toggle">
@@ -442,7 +446,6 @@ nav{
 </style>
 <!-- TRATAMIENTOS -->
  <!-- BANNER -->
-
 <section class="banner-tratamientos">
 
     <div class="contenido-banner">
@@ -456,12 +459,35 @@ nav{
             para el diagnóstico y tratamiento de enfermedades oculares.
         </p>
 
+        <a href="#tratamientos" class="btn-banner">
+           Explorar Tratamientos
+        </a>
+
     </div>
 
 </section>
 <style>/* ==========================
    BANNER TRATAMIENTOS
 ========================== */
+
+
+.btn-banner{
+    display:inline-block;
+    margin-top:25px;
+    padding:16px 35px;
+    background:linear-gradient(135deg,#00b4d8,#0077b6);
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,119,182,.25);
+}
+
+.btn-banner:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(0,119,182,.35);
+}
 
 .banner-tratamientos{
     position:relative;
@@ -590,24 +616,19 @@ nav{
 
 }</style>
 
-
-<section class="tratamientos">
+<section class="tratamientos" id="tratamientos">
 
     <div class="titulo">
-
         <span>NUESTROS TRATAMIENTOS</span>
-
         <h2>Tratamientos Especializados</h2>
-
     </div>
 
     <div class="contenedor-tratamientos">
 
-        <!-- 1 -->
-
+        <!-- CATARATA -->
         <div class="card-tratamiento">
 
-            <img src="img/catarata.jpg" alt="Catarata">
+            <img src="catarata.jpg" alt="Catarata">
 
             <div class="contenido">
 
@@ -617,17 +638,20 @@ nav{
                     Recupera la calidad de tu visión mediante procedimientos modernos.
                 </p>
 
-                <a href="#">Más información</a>
+                <div class="info-completa">
+                    La cirugía de catarata permite recuperar una visión clara mediante el reemplazo del cristalino opaco por un lente intraocular de alta tecnología.
+                </div>
+
+                <a href="#" class="btn-info">Más información</a>
 
             </div>
 
         </div>
 
-        <!-- 2 -->
-
+        <!-- GLAUCOMA -->
         <div class="card-tratamiento">
 
-            <img src="img/glaucoma.jpg" alt="Glaucoma">
+            <img src="Glaucomas.webp" alt="Glaucoma">
 
             <div class="contenido">
 
@@ -637,17 +661,20 @@ nav{
                     Diagnóstico oportuno y seguimiento especializado.
                 </p>
 
-                <a href="#">Más información</a>
+                <div class="info-completa">
+                    El glaucoma requiere diagnóstico temprano y control continuo para evitar daños irreversibles en el nervio óptico.
+                </div>
+
+                <a href="#" class="btn-info">Más información</a>
 
             </div>
 
         </div>
 
-        <!-- 3 -->
-
+        <!-- MIOPIA -->
         <div class="card-tratamiento">
 
-            <img src="img/miopia.jpg" alt="Miopía">
+            <img src="catarata.jpg" alt="Miopía">
 
             <div class="contenido">
 
@@ -657,17 +684,20 @@ nav{
                     Soluciones para mejorar tu visión a distancia.
                 </p>
 
-                <a href="#">Más información</a>
+                <div class="info-completa">
+                    La corrección de miopía puede realizarse mediante lentes, lentes de contacto o cirugía refractiva.
+                </div>
+
+                <a href="#" class="btn-info">Más información</a>
 
             </div>
 
         </div>
 
-        <!-- 4 -->
-
+        <!-- ASTIGMATISMO -->
         <div class="card-tratamiento">
 
-            <img src="img/astigmatismo.jpg" alt="Astigmatismo">
+            <img src="catarata.jpg" alt="Astigmatismo">
 
             <div class="contenido">
 
@@ -677,17 +707,20 @@ nav{
                     Tratamientos personalizados para una visión más nítida.
                 </p>
 
-                <a href="#">Más información</a>
+                <div class="info-completa">
+                    Tratamientos especializados que permiten corregir la visión borrosa causada por irregularidades en la córnea.
+                </div>
+
+                <a href="#" class="btn-info">Más información</a>
 
             </div>
 
         </div>
 
-        <!-- 5 -->
-
+        <!-- OJO SECO -->
         <div class="card-tratamiento">
 
-            <img src="img/ojo-seco.jpg" alt="Ojo Seco">
+            <img src="ojoseco.jpg" alt="Ojo Seco">
 
             <div class="contenido">
 
@@ -697,17 +730,20 @@ nav{
                     Evaluación y tratamiento para aliviar molestias oculares.
                 </p>
 
-                <a href="#">Más información</a>
+                <div class="info-completa">
+                    Evaluamos la causa del ojo seco y aplicamos tratamientos personalizados para mejorar la lubricación ocular.
+                </div>
+
+                <a href="#" class="btn-info">Más información</a>
 
             </div>
 
         </div>
 
-        <!-- 6 -->
-
+        <!-- RETINOPATIA -->
         <div class="card-tratamiento">
 
-            <img src="img/retina.jpg" alt="Retinopatía">
+            <img src="Glaucomas.webp" alt="Retinopatía">
 
             <div class="contenido">
 
@@ -717,17 +753,20 @@ nav{
                     Prevención y control de complicaciones visuales.
                 </p>
 
-                <a href="#">Más información</a>
+                <div class="info-completa">
+                    Detectamos y tratamos complicaciones de la diabetes que afectan la retina para preservar la visión.
+                </div>
+
+                <a href="#" class="btn-info">Más información</a>
 
             </div>
 
         </div>
 
-        <!-- 7 -->
-
+        <!-- MACULAR -->
         <div class="card-tratamiento">
 
-            <img src="img/macular.jpg" alt="Degeneración Macular">
+            <img src="catarata.jpg" alt="Degeneración Macular">
 
             <div class="contenido">
 
@@ -737,17 +776,20 @@ nav{
                     Tratamientos especializados para preservar la visión.
                 </p>
 
-                <a href="#">Más información</a>
+                <div class="info-completa">
+                    Tratamientos avanzados para ralentizar el avance de la enfermedad y proteger la visión central.
+                </div>
+
+                <a href="#" class="btn-info">Más información</a>
 
             </div>
 
         </div>
 
-        <!-- 8 -->
-
+        <!-- LENTES -->
         <div class="card-tratamiento">
 
-            <img src="img/lentes.jpg" alt="Lentes de Contacto">
+            <img src="ojoseco.jpg" alt="Lentes de Contacto">
 
             <div class="contenido">
 
@@ -757,7 +799,11 @@ nav{
                     Adaptación personalizada para una visión cómoda.
                 </p>
 
-                <a href="#">Más información</a>
+                <div class="info-completa">
+                    Adaptación personalizada de lentes de contacto según las necesidades visuales de cada paciente.
+                </div>
+
+                <a href="#" class="btn-info">Más información</a>
 
             </div>
 
@@ -766,20 +812,134 @@ nav{
     </div>
 
 </section>
+
 <style></style>
 <!-- CTA -->
 
 <section class="cta">
 
-    <h2>Agenda tu Consulta Oftalmológica</h2>
+    <div class="cta-contenido">
 
-    <p>
-        Nuestro equipo está listo para brindarte la mejor atención visual.
-    </p>
+        <span class="etiqueta">ATENCIÓN OFTALMOLÓGICA ESPECIALIZADA</span>
 
-    <a href="contacto.html">Solicitar Cita</a>
+        <h2>Agenda tu Consulta Oftalmológica</h2>
+
+        <p>
+            Nuestro equipo de especialistas y tecnología de última generación
+            están listos para cuidar tu salud visual.
+        </p>
+
+        <div class="cta-botones">
+            <a href="contacto.html" class="btn-principal">
+                Solicitar Cita
+            </a>
+        </div>
+
+    </div>
 
 </section>
+<style>/* ==========================
+   CTA MODERNO
+========================== */
+
+.cta{
+    position:relative;
+    padding:100px 20px;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #eef8ff,
+        #dff3ff
+    );
+
+    text-align:center;
+}
+
+/* círculos decorativos */
+
+.cta::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:rgba(0,180,216,.10);
+    top:-120px;
+    left:-120px;
+}
+
+.cta::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:rgba(0,119,182,.08);
+    bottom:-100px;
+    right:-100px;
+}
+
+.cta-contenido{
+    max-width:800px;
+    margin:auto;
+    position:relative;
+    z-index:2;
+}
+
+.etiqueta{
+    display:inline-block;
+    background:#eaf7ff;
+    color:#0077b6;
+    padding:10px 20px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.cta h2{
+    font-size:52px;
+    margin-top:20px;
+    color:#0d2b45;
+}
+
+.cta p{
+    max-width:650px;
+    margin:20px auto 35px;
+    font-size:18px;
+    line-height:1.8;
+    color:#5d6d7e;
+}
+
+.btn-principal{
+    display:inline-block;
+    padding:18px 40px;
+    background:linear-gradient(
+        135deg,
+        #00b4d8,
+        #0077b6
+    );
+
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:700;
+    font-size:17px;
+
+    box-shadow:
+    0 10px 30px rgba(0,119,182,.25);
+
+    transition:.4s;
+}
+
+.btn-principal:hover{
+    transform:translateY(-5px);
+    box-shadow:
+    0 20px 40px rgba(0,119,182,.35);
+}</style>
 
 <!-- FOOTER -->
 
@@ -858,6 +1018,32 @@ nav{
    TARJETAS
 ========================== */
 
+
+.info-completa{
+    display:none;
+    margin-top:12px;
+    color:#555;
+    font-size:14px;
+    line-height:1.7;
+}
+
+.info-completa.mostrar{
+    display:block;
+}
+
+.btn-info{
+    display:inline-block;
+    margin-top:15px;
+    color:#0077b6;
+    font-weight:600;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn-info:hover{
+    color:#00a8e8;
+}
+
 .card-tratamiento{
     width:320px;
     background:white;
@@ -910,32 +1096,6 @@ nav{
    CTA
 ========================== */
 
-.cta{
-    background:#0099ff;
-    color:white;
-    text-align:center;
-    padding:80px 20px;
-}
-
-.cta h2{
-    font-size:40px;
-    margin-bottom:15px;
-}
-
-.cta p{
-    margin-bottom:25px;
-    line-height:1.8;
-}
-
-.cta a{
-    display:inline-block;
-    text-decoration:none;
-    background:white;
-    color:#0099ff;
-    padding:14px 30px;
-    border-radius:30px;
-    font-weight:600;
-}
 
 /* ==========================
    FOOTER
@@ -966,14 +1126,204 @@ footer{
     }
 
 }</style>
+<script>
 
-<footer>
+document.querySelectorAll('.btn-info').forEach(boton => {
 
-    <p>
-        © 2026 Clínica Oftalmológica - Todos los derechos reservados.
-    </p>
+    boton.addEventListener('click', function(e){
+
+        e.preventDefault();
+
+        const info = this.parentElement.querySelector('.info-completa');
+
+        info.classList.toggle('mostrar');
+
+        if(info.classList.contains('mostrar')){
+            this.textContent = 'Ver menos';
+        }else{
+            this.textContent = 'Más información';
+        }
+
+    });
+
+});
+
+</script>
+<footer class="footer">
+
+    <div class="footer-contenedor">
+
+        <!-- Empresa -->
+        <div class="footer-col">
+            <h3>OCULASER</h3>
+
+            <p>
+                Centro Oftalmológico comprometido con el cuidado de tu salud visual,
+                ofreciendo atención especializada con tecnología de última generación.
+            </p>
+        </div>
+
+        <!-- Enlaces -->
+        <div class="footer-col">
+            <h3>Enlaces</h3>
+
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#especialistas">Especialistas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div class="footer-col">
+            <h3>Contacto</h3>
+
+            <p><i class="fas fa-map-marker-alt"></i> Lima, Perú</p>
+
+            <p><i class="fas fa-phone"></i> +51 999 999 999</p>
+
+            <p><i class="fas fa-envelope"></i> info@oculaser.pe</p>
+        </div>
+
+        <!-- Redes -->
+        <div class="footer-col">
+            <h3>Síguenos</h3>
+
+            <div class="redes-footer">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+                <a href="#"><i class="fab fa-youtube"></i></a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 <strong>OCULASER Centro Oftalmológico</strong> | Todos los derechos reservados.
+        </p>
+
+    </div>
 
 </footer>
+<style>/*=========================
+        FOOTER
+=========================*/
+
+.footer{
+    background:#0b1f3a;
+    color:#fff;
+    
+}
+
+.footer-contenedor{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:50px;
+    padding:60px 0;
+}
+
+.footer-col h3{
+    font-size:22px;
+    margin-bottom:20px;
+    color:#35b6ff;
+}
+
+.footer-col p{
+    line-height:1.8;
+    color:#d7d7d7;
+    margin-bottom:10px;
+}
+
+.footer-col ul{
+    list-style:none;
+}
+
+.footer-col ul li{
+    margin-bottom:12px;
+}
+
+.footer-col ul li a{
+    color:#d7d7d7;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-col ul li a:hover{
+    color:#35b6ff;
+    padding-left:6px;
+}
+
+.redes-footer{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.redes-footer a{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#17345d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:20px;
+    transition:.3s;
+}
+
+.redes-footer a:hover{
+    background:#35b6ff;
+    transform:translateY(-5px);
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.15);
+    text-align:center;
+    padding:20px;
+    color:#cfcfcf;
+    font-size:15px;
+}
+
+/*=========================
+      RESPONSIVE
+=========================*/
+
+@media(max-width:900px){
+
+    .footer-contenedor{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .footer-contenedor{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .redes-footer{
+        justify-content:center;
+    }
+
+}</style>
+
+
 
 </body>
 </html>
