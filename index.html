@@ -36,7 +36,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
         <ul>
             <li><a href="#">INICIO</a></li>
-            <li><a href="#">SERVICIOS</a></li>
+            <li><a href="servicios.html">SERVICIOS</a></li>
             <li><a href="tratmientos.html">TRATAMIENTOS</a></li>
             <li><a href="especialista.html">ESPECIALISTAS</a></li>
             <li><a href="#">NOSOTROS</a></li>
@@ -440,7 +440,7 @@ nav{
 
             <div class="banner-botones">
                 <a href="#contacto" class="btn-principal">Contáctanos</a>
-                <a href="#servicios" class="btn-secundario">Nuestros Servicios</a>
+                <a href="servicios.html" class="btn-secundario">Nuestros Servicios</a>
             </div>
         </div>
     </div>
@@ -461,7 +461,7 @@ nav{
 
             <div class="banner-botones">
                 <a href="#contacto" class="btn-principal">Contáctanos</a>
-                <a href="#servicios" class="btn-secundario">Nuestros Servicios</a>
+                <a href="servicios.html" class="btn-secundario">Nuestros Servicios</a>
             </div>
         </div>
     </div>
@@ -479,7 +479,7 @@ nav{
 
             <div class="banner-botones">
                 <a href="#contacto" class="btn-principal">Contáctanos</a>
-                <a href="#servicios" class="btn-secundario">Nuestros Servicios</a>
+                <a href="servicios.html" class="btn-secundario">Nuestros Servicios</a>
             </div>
         </div>
     </div>
@@ -823,7 +823,7 @@ setInterval(cambiarBanner,4000);
                         tu salud visual.
                     </p>
 
-                    <a href="#">VER MÉDICOS</a>
+                    <a href="especialista.html">VER MÉDICOS</a>
                 </div>
 
                 <img src="doctorrr.png" alt="Especialista">
@@ -1152,7 +1152,7 @@ setInterval(cambiarBanner,4000);
 
             <p class="detalle" id="detalle"></p>
 
-            <a href="#" class="btn-especialistas">
+            <a href="especialista.html" class="btn-especialistas">
                 VER ESPECIALISTAS
             </a>
 
@@ -1260,18 +1260,45 @@ setInterval(cambiarBanner,4000);
 =============================*/
 
 .btn-especialistas{
+
     display:inline-block;
+
     margin-top:30px;
+
     padding:15px 35px;
-    background:#2563eb;
+
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #38bdf8,
+        #60a5fa
+    );
+
     color:#fff;
+
     text-decoration:none;
+
     border-radius:50px;
-    transition:.3s;
+
+    transition:.4s;
+
+    box-shadow:
+    0 10px 25px rgba(37,99,235,.25);
 }
 
 .btn-especialistas:hover{
-    background:#0f2d89;
+
+    transform:translateY(-3px);
+
+    background:linear-gradient(
+        90deg,
+        #1d4ed8,
+        #2563eb,
+        #3fa2cd
+    );
+
+    box-shadow:
+    0 15px 30px rgba(37,99,235,.35);
 }
 
 /*=============================
@@ -1597,7 +1624,7 @@ setInterval(cambiarBanner,4000);
         <!-- TARJETA 1 -->
         <div class="card-blog">
 
-            <img src="img/catarata.jpg" alt="Catarata">
+            <img src="catarata.jpg" alt="Catarata">
 
             <div class="contenido-blog">
 
@@ -1628,7 +1655,7 @@ setInterval(cambiarBanner,4000);
         <!-- TARJETA 2 -->
         <div class="card-blog">
 
-            <img src="img/glaucoma.jpg" alt="Glaucoma">
+            <img src="Glaucomas.webp" alt="Glaucoma">
 
             <div class="contenido-blog">
 
@@ -1658,7 +1685,7 @@ setInterval(cambiarBanner,4000);
         <!-- TARJETA 3 -->
         <div class="card-blog">
 
-            <img src="img/ojo-seco.jpg" alt="Ojo seco">
+            <img src="ojoseco.jpg" alt="Ojo seco">
 
             <div class="contenido-blog">
 
@@ -1692,27 +1719,68 @@ setInterval(cambiarBanner,4000);
    BLOG / CONSEJOS VISUALES
 ========================== */
 
-.blog{
-    padding:80px 8%;
-    background:#f7fbff;
-}
 
+.blog{
+
+    padding:100px 8%;
+
+    background:
+    linear-gradient(
+        rgba(255,255,255,.90),
+        rgba(255,255,255,.90)
+    ),
+    url("catarata.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+}
 .titulo-blog{
     text-align:center;
     margin-bottom:50px;
 }
 
 .titulo-blog span{
-    color:#00a6ff;
+
     font-size:14px;
+
     font-weight:600;
+
     letter-spacing:2px;
+
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #38bdf8,
+        #60a5fa,
+        #93c5fd
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+
 }
 
 .titulo-blog h2{
+
     font-size:42px;
-    color:#0b2341;
+
     margin-top:10px;
+
+    background:linear-gradient(
+        90deg,
+        #0f172a,
+        #2563eb,
+        #38bdf8
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+
 }
 
 /* CONTENEDOR */
@@ -1755,7 +1823,7 @@ setInterval(cambiarBanner,4000);
 }
 
 .contenido-blog h3{
-    color:#0b2341;
+    color:#1b72dd;
     font-size:22px;
     margin-bottom:15px;
 }
@@ -1923,12 +1991,11 @@ function mostrarTexto(boton){
 <style>/*=========================
         FOOTER
 =========================*/
-
 .footer{
     background:#0b1f3a;
     color:#fff;
-    margin-top:80px;
 }
+
 
 .footer-contenedor{
     width:90%;
